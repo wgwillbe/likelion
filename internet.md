@@ -9,7 +9,7 @@
 >앞으로 나올 예시에서의 '연결'은 유선 네트워크와 관련해서만 이야기하지만, 유선 네트워크와 무선 네트워크는 동일한 방식이다.
 
 두 대의 컴퓨터를 연결한다고 가정했을 때, 아래와 같은 모양일 것이다.
-<img src="https://media.vlpt.us/images/exploit017/post/0533232a-ea61-4c5f-92cc-6c595b0e4c18/image.png" weidth="1000px" height="400px">
+<img src="https://media.vlpt.us/images/exploit017/post/0533232a-ea61-4c5f-92cc-6c595b0e4c18/image.png" weidth="800px" height="300px">
 
 **hi**
 <pre>
