@@ -34,8 +34,8 @@ DELETE : 자료의 삭제를 요청할 때 사용
 
 ### Request HTTP 메시지 예시
 
->GET https://velog.io/@surim014 HTTP/1.1								// 시작줄
->User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...			  // 헤더
+>GET https://velog.io/@surim014 HTTP/1.1								// 시작줄  
+>User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...			  // 헤더  
 >Upgrade-Insecure-Requests: 1
 
 ### 1. 시작줄 (첫 줄)
@@ -68,12 +68,12 @@ User-Agent, Upgrade-Insecure-Requests 등이 헤더에 해당
 
 ### Response HTTP 메시지 예시
 
->HTTP/1.1 200 OK														// 시작줄
->Connection: keep-alive												 // 헤더
->Content-Encoding: gzip												 
->Content-Length: 35653
->Content-Type: text/html;
->
+>HTTP/1.1 200 OK														// 시작줄  
+>Connection: keep-alive												 // 헤더  
+>Content-Encoding: gzip												   
+>Content-Length: 35653  
+>Content-Type: text/html;  
+>  
 ><!DOCTYPE html><html lang="ko" data-reactroot=""><head><title...
 
 ### 1. 시작줄 (첫 줄)
