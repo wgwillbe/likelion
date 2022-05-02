@@ -10,7 +10,8 @@ HTTP는 연결을 유지하지 않는 프로토콜이기 때문에 요청/응답
 - 서버 : 어떠한 자료에 대한 접근을 관리하는 네트워크 상의 시스템(요청에 대한 응답을 보내준다.)
 - 클라이언트 : 그 자료에 접근할 수 있는 프로그램
 예) 웹 브라우저, 핸드폰 어플리케이션 등
-예를 들면, 클라이언트 즉, 사용자가 브라우저를 통해서 어떠한 서비스를 url을 통하거나 다른 것을 통해서 요청을 하면 서버에서는 해당 요청사항에 맞는 결과를 찾아서 사용자에게 응답하는 형태로 동작합니다.
+예를 들면, 클라이언트(Client) 즉, 사용자가 브라우저를 통해서 어떠한 서비스를 url을 통하거나 다른 것을 통해서 요청을 하면 서버에서는 해당 요청사항에 맞는 결과를 찾아서 사용자에게 응답하는 형태로 동작합니다.
+<img scr="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdBk69W%2Fbtqt840ZIvC%2FLmpHbqNrGL304addYt19H1%2Fimg.png" width="600px" height="400px">
 
 요청 : client -> server  
 응답 : server -> client
@@ -53,7 +54,7 @@ GET : HTTP Method
 ### 1. 시작줄 (첫 줄)
 첫 줄은 버전 상태코드 상태메시지로 구성되어 있다. 200은 성공적인 요청이었다는 뜻이다.
 
-<img src="https://media.vlpt.us/images/exploit017/post/1a14189f-4999-49e6-9632-a169c0202e3d/image.png" weidth="600px" height="400px">
+<img src="https://media.vlpt.us/images/exploit017/post/1a14189f-4999-49e6-9632-a169c0202e3d/image.png" width="600px" height="400px">
 
 ### 2. 헤더 (두 번째 줄부터)
 두 번째 줄부터는 헤더로 응답에 대한 정보를 담고 있다.
