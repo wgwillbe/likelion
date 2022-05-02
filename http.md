@@ -40,19 +40,19 @@ GET https://velog.io/@surim014 HTTP/1.1
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...  
 Upgrade-Insecure-Requests: 1
 ~~~~
-### 1. 시작줄 (첫 줄)
+### 1. 시작줄
 메서드 구조 버전으로 구성
 
 GET : HTTP Method  
 https://velog.io/@surim014 : 사이트 주소
 HTTP/1.1 : HTTP 버전
 
-### 2. 헤더 (두 번째 줄부터)
+### 2. 헤더
 **요청에 대한 정보** 담고 있음  
 User-Agent, Upgrade-Insecure-Requests 등이 헤더에 해당  
 헤더의 종류는 매우 많음
 
-### 3. 본문(헤더에서 한 줄 띄고)
+### 3. 본문
 요청을 할 때 함께 보낼 데이터를 담는 부분  
 현재 예시에는 단순히 주소로만 요청을 보내고 있고 따로 데이터를 담아 보내지 않기 때문에 본문이 비어있다.
 
@@ -83,14 +83,14 @@ Content-Type: text/html;
 <!DOCTYPE html><html lang="ko"data-reactroot=""><head><title...
 ~~~~
 
-### 1. 시작줄 (첫 줄)
+### 1. 시작줄
 버전 상태코드 상태메시지로 구성  
 200은 성공적인 요청
 
-### 2. 헤더 (두 번째 줄부터)
+### 2. 헤더
 헤더로 응답에 대한 정보
 
-### 3. 본문 (헤더 뒤부터)
+### 3. 본문
 응답에는 대부분의 경우 본문이 있다.  
 보통 데이터를 요청하고 응답 메시지에는 요청한 데이터를 담아서 보내주기 때문이다.  
 응답 메시지에 HTML이 담겨 있는데 이 HTML을 받아 브라우저가 화면에 렌더링 한다.
