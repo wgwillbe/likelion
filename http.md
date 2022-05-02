@@ -11,7 +11,7 @@ HTTP는 연결을 유지하지 않는 프로토콜이기 때문에 요청/응답
 - 클라이언트 : 그 자료에 접근할 수 있는 프로그램
 예) 웹 브라우저, 핸드폰 어플리케이션 등
 예를 들면, 클라이언트(Client) 즉, 사용자가 브라우저를 통해서 어떠한 서비스를 url을 통하거나 다른 것을 통해서 요청을 하면 서버에서는 해당 요청사항에 맞는 결과를 찾아서 사용자에게 응답하는 형태로 동작합니다.
-<img scr="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdBk69W%2Fbtqt840ZIvC%2FLmpHbqNrGL304addYt19H1%2Fimg.png" width="600px" height="400px">
+<img scr="C:\Users\user\Desktop\request-response.jpg" width="600px" height="400px">
 
 요청 : client -> server  
 응답 : server -> client
@@ -61,3 +61,14 @@ GET : HTTP Method
 
 ### 3. 본문 (헤더 뒤부터)
 응답에는 대부분의 경우 본문이 있다. 보통 데이터를 요청하고 응답 메시지에는 요청한 데이터를 담아서 보내주기 때문이다. 응답 메시지에 HTML이 담겨 있는데 이 HTML을 받아 브라우저가 화면에 렌더링 한다.
+
+### Chrome에서 HTTP header확인하기
+1. Chorme에서 개발자 도구창 열기(F12 또는 Ctrl+Shift+I)
+2. Network 클릭
+3. 하단의 Name에서 url를 클릭하면 Header확인 가능
+4. 주소를 https에서 http로 변경하면 더 자세히 알 수 있다.
+#### Response HTTP Message
+<img src="C:\Users\user\Desktop\response http message.jpg" width="500px" height="350px">
+
+#### Request HTTP Message
+<img src="C:\Users\user\Desktop\request http message.jpg">
