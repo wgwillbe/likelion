@@ -11,7 +11,8 @@ HTTP는 연결을 유지하지 않는 프로토콜이기 때문에 요청/응답
 - 클라이언트 : 그 자료에 접근할 수 있는 프로그램
 예) 웹 브라우저, 핸드폰 어플리케이션 등
 예를 들면, 클라이언트(Client) 즉, 사용자가 브라우저를 통해서 어떠한 서비스를 url을 통하거나 다른 것을 통해서 요청을 하면 서버에서는 해당 요청사항에 맞는 결과를 찾아서 사용자에게 응답하는 형태로 동작합니다.
-<img scr="https://user-images.githubusercontent.com/101981594/166189002-a56f92ba-06ff-4b40-b948-7ae43936048f.jpg" width="500px" height="400px"/>
+
+<img scr="https://user-images.githubusercontent.com/101981594/166189002-a56f92ba-06ff-4b40-b948-7ae43936048f.jpg" width="800px" height="550px"/>
 
 요청 : client -> server  
 응답 : server -> client
@@ -66,7 +67,7 @@ GET : HTTP Method
 3. 하단의 Name에서 url를 클릭하면 Header확인 가능
 4. 주소를 https에서 http로 변경하면 더 자세히 알 수 있다.
 #### Response HTTP Message
-<img src="https://user-images.githubusercontent.com/101981594/166188990-419d3a9d-e72e-48db-aa21-140a2115de4a.jpg" width="500px" height="350px"/>
+<img src="https://user-images.githubusercontent.com/101981594/166188990-419d3a9d-e72e-48db-aa21-140a2115de4a.jpg" width="800px" height="650px"/>
 
 #### Request HTTP Message
-<img src="https://user-images.githubusercontent.com/101981594/166188969-8f8a2377-7f99-4e28-9156-effe43720504.jpg" width="500px" height="350px"/>
+<img src="https://user-images.githubusercontent.com/101981594/166188969-8f8a2377-7f99-4e28-9156-effe43720504.jpg" width="800px" height="650px"/>
