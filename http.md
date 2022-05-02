@@ -100,8 +100,8 @@ Content-Type: text/html;
 2. Network 클릭
 3. 하단의 Name에서 url를 클릭하면 Header확인 가능
 4. 주소를 https에서 http로 변경하면 더 자세히 알 수 있다.
-#### Response HTTP Message
+### Response HTTP Message
 <img src="https://user-images.githubusercontent.com/101981594/166188990-419d3a9d-e72e-48db-aa21-140a2115de4a.jpg" width="800px" height="450px"/>
 
-#### Request HTTP Message
+### Request HTTP Message
 <img src="https://user-images.githubusercontent.com/101981594/166188969-8f8a2377-7f99-4e28-9156-effe43720504.jpg" width="800px" height="450px"/>
