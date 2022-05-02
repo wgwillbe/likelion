@@ -54,8 +54,6 @@ GET : HTTP Method
 ### 1. 시작줄 (첫 줄)
 첫 줄은 버전 상태코드 상태메시지로 구성되어 있다. 200은 성공적인 요청이었다는 뜻이다.
 
-<img src="https://media.vlpt.us/images/exploit017/post/1a14189f-4999-49e6-9632-a169c0202e3d/image.png" width="600px" height="400px">
-
 ### 2. 헤더 (두 번째 줄부터)
 두 번째 줄부터는 헤더로 응답에 대한 정보를 담고 있다.
 
