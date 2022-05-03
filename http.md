@@ -97,4 +97,4 @@ HTTP/1.1 포맷 내에서 HTTP/2를 이해하는 것은 여전히 유용
 ### Request HTTP Message
 <img src="https://user-images.githubusercontent.com/101981594/166188969-8f8a2377-7f99-4e28-9156-effe43720504.jpg" width="800px" height="450px"/>
 
-![url](https://developer.mozilla.org/ko/docs/Web/HTTP).
+<https://developer.mozilla.org/ko/docs/Web/HTTP>
