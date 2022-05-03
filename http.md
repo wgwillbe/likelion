@@ -6,55 +6,60 @@
 HTTP는 1989년 팀 버너스-리에 의해 처음 설계되어 인터넷을 통한 월드 와이드 웹(World-Wide Web : www)기반에서 전 세계적인 정보 공유를 이루는데 큰 역할  
 HTTP는 웹에서만 사용하는 프로토콜로 TCP/IP 기반으로 한 지점에서 다른 지점(서버와 클라이언트)으로 요청과 응답을 전송
 
+**HTTP는 HTML 문서와 같은 리소스들을 가져올 수 있도록 해주는 프로토콜**  
+웹에서 이루어지는 모든 데이터 교환이 기초, 클라이언트-서버 프로토콜  
+* 클라이언트-서버 프로토콜 : 수신자(보통 웹브라우저) 측에 의해 요청이 초기화되는 프로토콜  
+하나의 완전한 문서는 텍스트, 레이아웃 설명, 이미지, 비디오, 스크립트 등 불러온 하위 문서 들로 재구성
+<img src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png" width="400px" height="350px"/>  
+클라이언트와 서버들은 (데이터 스트림과 대조적으로) 개별적이 메시지 교환에 의해 통신  
+요청(request) : 클라이언트에 의해 전송되는 메시지  
+응답(response) : 요청에 대해 서버에서 응답으로 전송되는 메시지  
+
+<img src="https://mdn.mozillademos.org/files/13673/HTTP%20&%20layers.png" width="500px" height="500px"/>  
+1990년대 초에 설계된 HTTP는 거듭하여 진화해온 확장 가능한 프로토콜  
+HTTP는 애플리케이션 계층의 프로토콜, 신뢰 가능한 전송 프로토콜이라면 이론상으로는 무엇이든 사용가능(TCP혹은 암호와된 TCP 연결인 TLS를 통해 전송)
+
+## HTTP 기반 시스템의 구성요소
+요청은 하나의 개체, 사용자 에이전트(프록시)에 의해 전송  
+대부분의 경우, 사용자 에이전트는 브라우저지만, 무엇이든 될 수 있음  
+ex) 검색 엔진 인덱스를 채워넣고 유지하기 위해 웹을 돌아다니는 로봇  
+  
+요청과 응답 사이에는 여러 개체들이 존재  
+ex) 게이트웨이 : 다양한 작업 수행, 프록시 : 캐시 역할  
+<img src="https://mdn.mozillademos.org/files/13679/Client-server-chain.png" width="500px" height="80px"/>  
+브라우저와 요청을 처리하는 서버 사이에는 좀 더 많은 컴퓨터들이 존재(라우터, 모뎀 등)  
+웹의 계층적인 설계 덕분에 네트워크와 전송 계층 내로 숨겨짐  
+HTTP은 애플리케이션 계층의 최상위  
+네트워크 문제를 진단하는 것도 중요하지만, 기본레이어들은 HTTP의 명세와는 거의 관련이 없다.
+
 ## HTTP의 특징
-HTTP 메시지는 HTTP 서버와 HTTP 클라이언트에 의해 해석  
-TCP/IP를 이용하는 응용 프로토콜(application protocol)  
-HTTP는 연결 상태를 유지하지 않는 비연결성 프로토콜 (이러한 단점을 해결하기 위해 Cookie와 Session 등장)  
-HTTP는 연결을 유지하지 않는 프로토콜이기 때문에 요청/응답(request/response) 방식으로 동작
-- 서버 : 어떠한 자료에 대한 접근을 관리하는 네트워크 상의 시스템(요청에 대한 응답을 보내줌)
-- 클라이언트 : 그 자료에 접근할 수 있는 프로그램  
-예) 웹 브라우저, 핸드폰 어플리케이션 등
+### 간결성
+HTTP는 사람이 읽을 수 있으며 간단하게 고안  
+HTTP/2가 다소 더 복잡해졌지만 HTTP메세지를 프레임별로 캡슐화하여 간결함 유지  
 
-<img src="https://user-images.githubusercontent.com/101981594/166189002-a56f92ba-06ff-4b40-b948-7ae43936048f.jpg" width="800px" height="400px"/>
+### 확장 가능
+HTTP/1.0에서 소개 된, HTTP 헤더는 HTTP를 확장하고 실험하기 쉽게 만듦  
+클라이언트와 서버가 새로운 헤더의 시맨틱에 대해 간단한 합의만 한다면 언제든지 새로운 기능 추가 가능
 
-클라이언트(Client) 즉, 사용자가 브라우저를 통해서 어떠한 서비스를 url을 통하거나 다른 것을 통해서 요청을 하면   
-서버에서는 해당 요청사항에 맞는 결과를 찾아서 사용자에게 응답하는 형태로 동작한다.
+### 상태 X 세션 O
+HTTP는 상태를 저장하지 않음(Stateless)  
+동일한 연결 상에서 연속하여 전달된 두개의  요청 사이에는 연결고리가 없음  
+ex) e-커머스 쇼핑 바구니처럼, 일관된 방식으로 사용자가 페이지와 상호작용하길 원할 때 문제 발생  
+HTTP의 핵심은 상태가 없는 것이지만 HTTP 쿠키는 상태가 있는 세션을 만들도록 함  
+헤더 확장성을 사용하여, 동일한 컨텍스트 또는 동일한 상태를 공유하기 위해 각각의 요청들에 세션을 만들도록 HTTP 쿠키가 추가
 
-**요청 : client -> server**  
-**응답 : server -> client**
+## HTTP 메시지
+HTTP/1.1와 초기 HTTP 메시지 : 사람이 읽을 수 있음  
+HTTP/2 : 메시지들은 새로운 이진 구조인 프레임 안으로 임베드되어, 헤더의 압축과 다중화와 같은 최적화를 가능  
+본래의 HTTP 메시지의 일부분만이 이 버전의 HTTP 내에서 전송된다고 할지라도, 각 메시지의 의미들은 변화하지 않으며 클라이언트는 본래의 HTTP/1.1 요청을 (가상으로) 재구성  
+HTTP/1.1 포맷 내에서 HTTP/2를 이해하는 것은 여전히 유용  
 
-### Request (요청)
-클라이언트가 서버에게 연락하는 것  
-요청을 보낼때는 요청에 대한 정보를 담아 서버로 전달
-### Request Method (요청의 종류)
-GET : 자료를 요청할 때 사용  
-POST : 자료의 생성을 요청할 때 사용  
-PUT : 자료의 수정을 요청할 때 사용  
-DELETE : 자료의 삭제를 요청할 때 사용
+### Request HTTP 메시지
+<img src="https://mdn.mozillademos.org/files/13687/HTTP_Request.png"/>
+- HTTP 메서드 : 보통 클라이언트가 수행하고자 하는 동작을 정의한 명사(GET : 자료를 요청할 때 사용 POST : 자료의 생성을 요청할 때 사용 PUT : 자료의 수정을 요청할 때 사용 DELETE : 자료의 삭제를 요청할 때 사용)  
+- 가져오려는 리소스의 경로 : 프로토콜 (http://), 도메인 (en-US) (여기서는 developer.mozilla.org), 또는 TCP 포트 (en-US) (여기서는 80)인 요소들을 제거한 리소스의 URL  
 
-### Request HTTP 메시지 예시
-~~~~
-// 시작줄 
-GET https://velog.io/@surim014 HTTP/1.1  
-// 헤더  
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...  
-Upgrade-Insecure-Requests: 1
-~~~~
-### 1. 시작줄
-메서드 구조 버전으로 구성
 
-GET : HTTP Method  
-https://velog.io/@surim014 : 사이트 주소
-HTTP/1.1 : HTTP 버전
-
-### 2. 헤더
-**요청에 대한 정보** 담고 있음  
-User-Agent, Upgrade-Insecure-Requests 등이 헤더에 해당  
-헤더의 종류는 매우 많음
-
-### 3. 본문
-요청을 할 때 함께 보낼 데이터를 담는 부분  
-현재 예시에는 단순히 주소로만 요청을 보내고 있고 따로 데이터를 담아 보내지 않기 때문에 본문이 비어있다.
 
 ## Response (응답)
 서버가 요청에 대한 답변을 클라이언트에게 보내는 것
@@ -68,7 +73,7 @@ User-Agent, Upgrade-Insecure-Requests 등이 헤더에 해당
 - 4XX (요청 오류) : 클라이언트에 오류가 있음을 나타낸다.
 - 5XX (서버 오류) : 서버가 유효한 요청을 명백하게 수행하지 못했음을 나타낸다.
 
-### Response HTTP 메시지 예시
+### Response HTTP 메시지
 
 ~~~~
 // 시작줄  
@@ -105,3 +110,5 @@ Content-Type: text/html;
 
 ### Request HTTP Message
 <img src="https://user-images.githubusercontent.com/101981594/166188969-8f8a2377-7f99-4e28-9156-effe43720504.jpg" width="800px" height="450px"/>
+
+![url](https://developer.mozilla.org/ko/docs/Web/HTTP).
