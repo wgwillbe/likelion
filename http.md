@@ -56,13 +56,25 @@ HTTP/1.1 포맷 내에서 HTTP/2를 이해하는 것은 여전히 유용
 
 ### Request HTTP 메시지
 <img src="https://mdn.mozillademos.org/files/13687/HTTP_Request.png"/>
+
+구성
+
 - HTTP 메서드 : 보통 클라이언트가 수행하고자 하는 동작을 정의한 명사(GET : 자료를 요청할 때 사용 POST : 자료의 생성을 요청할 때 사용 PUT : 자료의 수정을 요청할 때 사용 DELETE : 자료의 삭제를 요청할 때 사용)  
 - 가져오려는 리소스의 경로 : 프로토콜 (http://), 도메인 (en-US) (여기서는 developer.mozilla.org), 또는 TCP 포트 (en-US) (여기서는 80)인 요소들을 제거한 리소스의 URL  
+- HTTP 프로토콜의 버전  
+- 서버에 대한 추가 정보를 전달하는 선택적 헤더들  
+- 메서드를 위한 전송된 리소스를 포함하는 응답의 본문과 유사한 본문
 
+## Response HTTP 메시지
+<img src="https://mdn.mozillademos.org/files/13691/HTTP_Response.png" width="500px" height="400px"/>
 
+구성
 
-## Response (응답)
-서버가 요청에 대한 답변을 클라이언트에게 보내는 것
+- HTTP 프로토콜의 버전  
+- 요청의 성공 여부와, 그 이유를 나타내는 상태 코드  
+- 아무런 영향력이 없는, 상태 코드의 짧은 설명을 나타내는 상태 메시지  
+- 요청 헤더와 비슷한 HTTP 헤더들  
+- 선택 사항으로 가져온 리소스가 포함되는 본문
 
 ### Status Code (상태 코드)
 상태 코드에는 굉장히 많은 종류가 있다. 모두 숫자 세 자리로 이루어져 있으며, 아래와 같이 크게 다섯 부류로 나눌 수 있다.
@@ -73,32 +85,6 @@ HTTP/1.1 포맷 내에서 HTTP/2를 이해하는 것은 여전히 유용
 - 4XX (요청 오류) : 클라이언트에 오류가 있음을 나타낸다.
 - 5XX (서버 오류) : 서버가 유효한 요청을 명백하게 수행하지 못했음을 나타낸다.
 
-### Response HTTP 메시지
-
-~~~~
-// 시작줄  
-HTTP/1.1 200 OK  
-// 헤더   
-Connection: keep-alive  
-Content-Encoding: gzip  		   
-Content-Length: 35653  
-Content-Type: text/html;  
-  
-// 본문  
-<!DOCTYPE html><html lang="ko"data-reactroot=""><head><title...
-~~~~
-
-### 1. 시작줄
-버전 상태코드 상태메시지로 구성  
-200은 성공적인 요청
-
-### 2. 헤더
-헤더로 응답에 대한 정보
-
-### 3. 본문
-응답에는 대부분의 경우 본문이 있다.  
-보통 데이터를 요청하고 응답 메시지에는 요청한 데이터를 담아서 보내주기 때문이다.  
-응답 메시지에 HTML이 담겨 있는데 이 HTML을 받아 브라우저가 화면에 렌더링 한다.
 
 ### Chrome에서 HTTP header확인하기
 1. Chorme에서 개발자 도구창 열기(F12 또는 Ctrl+Shift+I)
