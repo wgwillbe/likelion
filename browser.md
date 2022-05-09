@@ -46,7 +46,7 @@ HTML5 명세는 주소 표시줄, 상태 표시줄, 도구 모음과 같은 일�
 
 다음은 렌더링 엔진의 기본적인 동작 과정이다.
 
-<img src = "https://d2.naver.com/content/images/2015/06/helloworld-59361-2.png" width=800px height=100px/>
+<img src = "https://d2.naver.com/content/images/2015/06/helloworld-59361-2.png" width=601px height=66px/>
 
 그림 2 렌더링 엔진의 동작 과정
 
