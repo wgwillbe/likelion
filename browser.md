@@ -25,7 +25,7 @@ HTML5 명세는 주소 표시줄, 상태 표시줄, 도구 모음과 같은 일�
 5. UI 백엔드 - 콤보 박스와 창 같은 기본적인 장치를 그림. 플랫폼에서 명시하지 않은 일반적인 인터페이스로서, OS 사용자 인터페이스 체계를 사용.
 6. 자바스크립트 해석기 - 자바스크립트 코드를 해석하고 실행.
 7. 자료 저장소 - 이 부분은 자료를 저장하는 계층이다. 쿠키를 저장하는 것과 같이 모든 종류의 자원을 하드 디스크에 저장할 필요가 있다. HTML5 명세에는 브라우저가 지원하는 '웹 데이터 베이스'가 정의되어 있다.
-<img src = "https://d2.naver.com/content/images/2015/06/helloworld-59361-1.png" width=100px height=100px/>
+<img src = "https://d2.naver.com/content/images/2015/06/helloworld-59361-1.png" width=800px height=800px/>
 
 그림 1 브라우저의 주요 구성 요소
 
@@ -46,7 +46,7 @@ HTML5 명세는 주소 표시줄, 상태 표시줄, 도구 모음과 같은 일�
 
 다음은 렌더링 엔진의 기본적인 동작 과정이다.
 
-<img src = "https://d2.naver.com/content/images/2015/06/helloworld-59361-2.png" width=100px height=30px/>
+<img src = "https://d2.naver.com/content/images/2015/06/helloworld-59361-2.png" width=800px height=100px/>
 
 그림 2 렌더링 엔진의 동작 과정
 
