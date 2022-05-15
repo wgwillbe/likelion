@@ -13,13 +13,15 @@ IP주소를 문자로 알아보기 쉽게 만든 인터넷상의 주소이다.
 
 
 - 각 DNS 서버들은 자신의 직속 하위 파트에 대한 정보를 알고 있어야 한다. Root 는 TLD에 대한 정보를, TLD는 SLD에 대한 정보를 아는 식으로 구성되어 있다.
-1. Root
+<img src="https://blog.kakaocdn.net/dn/daixja/btqDwdOqa9y/tbBH8CI7NRp3YbQ5ko68Kk/img.gif">
+
+1. **Root**
 
 가장 최상위에 위치해있다.
 
 실제로 주소엔 . 이 있으나, 생략된 형태로 사용해도 무방하다.
 
-2. TLD (Top-Level Domain, 최상위 도메인)
+2. **TLD (Top-Level Domain, 최상위 도메인)**
 
 도메인 레벨 중에 가장 높은 단계에 있는 도메인으로, 도메인의 목적, 종류, 국가를 나타낸다.
 
@@ -32,7 +34,7 @@ TLD를 더욱 세분화하여 구분하기도 한다.
 gTLD: 일반 최상위 도메인 .com , .net 등
 ccTLD: 국가 코드 최상위 도메인 .kr , .us 등
 New gTLD: 기존 gTLD 이외에 새롭게 추가된 도메인 형태 .news , .info 등 → 기존 gTLD의 수량적 한계로 새로운 gTLD 탄생
-3. SLD (Second-Level Domain, 차상위 도메인)
+3. **SLD (Second-Level Domain, 차상위 도메인)**
 
 ‘www.google.co.kr’ 처럼 SLD가 존재하는 경우도 있고, ‘www.naver.com’ 처럼 SLD가 존재하지 않고 TLD에서 바로 도메인 이름으로 건너뛰는 경우도 있음
 
@@ -42,9 +44,9 @@ go : 정부 기관
 
 등 도메인의 성격을 나타낸다.
 
-추가로, com은 commercial을 의미하므로 굳이 [co.com](http://co.com) 같은 형태로 쓸 필요가 없으며, [go.com](http://go.com) 같은 경우 의미상 모순을 이루게 됨.
+추가로, com은 commercial을 의미하므로 굳이 \[co.com\]\(http://co.com\) 같은 형태로 쓸 필요가 없으며, \[go.com\]\(http://go.com\) 같은 경우 의미상 모순을 이루게 됨.
 
-4. SUB (도메인 이름)
+4. **SUB (도메인 이름)**
 
 임의로 지정할 수 있는 사이트의 이름.
 
