@@ -9,7 +9,7 @@ IP주소를 문자로 알아보기 쉽게 만든 인터넷상의 주소이다.
 도메인 네임은 몇개의 파트로 이루어진 간단한 구조를 이루고 있다.
 
 점으로 구분하고, 우측에서 좌측으로 읽는다.
-<img src="https://velog.velcdn.com/images%2Fm-vault%2Fpost%2Faa47ab6d-b47e-4150-b23d-4feb79d20924%2F1.png">
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fo5rxP%2FbtqDwdBlzkJ%2FWIolDKPjfswC6AF3k2xlWk%2Fimg.png">
 
 
 - 각 DNS 서버들은 자신의 직속 하위 파트에 대한 정보를 알고 있어야 한다. Root 는 TLD에 대한 정보를, TLD는 SLD에 대한 정보를 아는 식으로 구성되어 있다.
