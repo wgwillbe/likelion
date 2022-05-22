@@ -5,7 +5,7 @@
  
 
 ## 호스팅의 종류
-<img src = "https://velog.velcdn.com/images%2Fm-vault%2Fpost%2Fa1de99b4-d2ed-4246-b760-4d7f33be36da%2F1.png">
+<img src = "https://velog.velcdn.com/images%2Fm-vault%2Fpost%2Fa1de99b4-d2ed-4246-b760-4d7f33be36da%2F1.png" width=600 height=700>
 
 1. 웹 호스팅
 웹 호스팅은 여러 고객이 하나의 서버를 함께 사용하는 형태다. 다세대가 거주하는 빌라(웹서버)에 방 한 칸(홈페이지가 들어갈 공간)을 임대하여 사용하는 격이다.
