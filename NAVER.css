@@ -1,5 +1,4 @@
-<style>
-  * {
+ * {
     box-sizing: border-box; /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
   }
   body {
@@ -113,4 +112,3 @@
   .color_naver {
     color: #03cf5d;
   }
-</style>
