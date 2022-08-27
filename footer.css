@@ -18,7 +18,7 @@ ul { /*ul의 하위요소 (li) 수평정렬을 위해 기본마진, 패딩 제�
     align-items: center;
     border-bottom: 1px solid #f1f3f6;
   }
-  .notive_box a{
+  .notive_box a {
     font-weight: bold;
     color: black;
   }
