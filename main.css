@@ -6,8 +6,8 @@ main {
     width: 1080px;
     margin: auto;
     display: grid;
-    grid-template-columns: 740px 330px;
-    grid-template-rows: 120px 310px 890px 130px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(24,40px)
     gap: 10px;
 }
 .temp-box {
